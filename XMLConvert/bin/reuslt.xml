@@ -1,0 +1,16 @@
+<classA>
+    <classAId>11</classAId>
+    <classAName>A1</classAName>
+    <classB>
+        <classBId>22</classBId>
+        <classBName>B2</classBName>
+    </classB>
+</classA>
+<classA>
+    <classAId>11</classAId>
+    <classAName>A1</classAName>
+    <classB>
+        <classBId>22</classBId>
+        <classBName>B2</classBName>
+    </classB>
+</classA>
