@@ -41,6 +41,9 @@ public class SwitchPage {
         // 获取当前页面句柄    
         handle = driver.getWindowHandle();
         switchToAnother(driver,handle);
+        Thread.sleep(1000);  
+        
+        driver.quit();
 
 	}
 	

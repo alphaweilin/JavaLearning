@@ -41,8 +41,8 @@ public class Demo {
         
         //判断title是不是 百度一下，你就知道  
         try{  
-            String baidu_title = "百度一下，你就知道";  
-            assert baidu_title == driver.getTitle();  
+            String baidu_title = "selenium_百度搜索";  
+            assert baidu_title.equals(driver.getTitle());  
             System.out.println("Test Pass");  
               
         }catch(Exception e){  
