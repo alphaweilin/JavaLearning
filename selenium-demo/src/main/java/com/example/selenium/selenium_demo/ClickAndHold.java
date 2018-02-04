@@ -2,10 +2,13 @@ package com.example.selenium.selenium_demo;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
-public class Demo {
+public class ClickAndHold {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
@@ -18,9 +21,17 @@ public class Demo {
         //设置页面加载完成等待时间  
         driver.manage().timeouts().pageLoadTimeout(8, TimeUnit.SECONDS);  
         
-        /**
-         * add your code
-         */
+        driver.get("https://www.baidu.com/duty/");  
+        
+        //定义第一段文字  
+        WebElement Sting_Sected = driver.findElement(By.xpath("//*/div[@class='dwri_bule']/table/tbody/tr/td/p"));  
+          
+        //定义第二段文字  
+        WebElement String_Second = driver.findElement(By.xpath("//*/div[@class='dwri_bule']/table/tbody/tr/td/ul/li[1]"));  
+          
+        Actions action = new Actions(driver);  
+        action.clickAndHold(Sting_Sected).moveToElement(String_Second).perform();  
+        action.release();  
         
         Thread.sleep(2000);
         driver.quit();
