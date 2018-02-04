@@ -31,7 +31,9 @@ public class Scroll {
         JavascriptExecutor je = (JavascriptExecutor) driver;  
               
         //执行js语句，拖拽浏览器滚动条，直到该元素到底部，马上就不可以见  
-        je.executeScript("arguments[0].scrollIntoView(true);",element);    
+        je.executeScript("arguments[0].scrollIntoView(true);",element);  
+        
+        driver.quit();
 
 	}
 	
