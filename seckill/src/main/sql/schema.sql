@@ -19,7 +19,7 @@ key idx_create_time(create_time)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='库存秒杀表'
 
 --初始化数据
-seckillseckillinsert into seckill(name,number,start_time,end_time)
+insert into seckill(name,number,start_time,end_time)
 values
 ('1000元秒杀iPhone6s',100,'2016-11-01 00:00:00','2016-11-02 00:00:00'),
 ('500元秒杀ipad air2',200,'2016-11-01 00:00:00','2016-11-02 00:00:00'),
@@ -36,3 +36,7 @@ CREATE TABLE success_killed(
 PRIMARY KEY(seckill_id,user_phone),
 key idx_create_time(create_time)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='秒杀成功明细表'
+
+
+show variables like 'sql_mode'
+set session sql_mode='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'
