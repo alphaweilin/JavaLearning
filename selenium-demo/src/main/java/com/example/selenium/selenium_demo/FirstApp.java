@@ -23,6 +23,7 @@ public class FirstApp {
         driver.get("https://www.baidu.com");
         
         driver.findElement(By.id("kw")).sendKeys("Java");
+        System.out.println(driver.findElement(By.id("kw")).getAttribute("value"));
         driver.findElement(By.id("su")).click();
         Thread.sleep(1000);
         
