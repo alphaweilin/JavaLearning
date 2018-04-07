@@ -1,4 +1,4 @@
-package com.example.spring_boot;
+package com.example.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableAutoConfiguration
 public class Example {
 	
-	@RequestMapping("/")
+	@RequestMapping(value= {"/","hi"})
 	String home(){
 		return "hello world!";
 	}
